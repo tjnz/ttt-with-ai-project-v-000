@@ -34,7 +34,7 @@ class Game
 	end
 	
 	def over?
-		won? ? true : draw?
+		won? || draw?
 	end
 	
 	def completed?
@@ -62,7 +62,7 @@ class Game
 	end
 	
 	def winner
-		won? ? the_winner : nil
+		the_winner if won?
 	end
 	
 	def turn
